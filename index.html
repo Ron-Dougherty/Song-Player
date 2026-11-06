@@ -301,7 +301,7 @@
         Share
       </button>
     </div>
-    <h1 class="c-title" id="cTitle">Musical Expressions</h1>
+    <h1 class="c-title" id="cTitle">Ron's Expressions</h1>
     <p class="c-sub" id="cSub" hidden></p>
     <div class="tabs" id="tabs" role="tablist" aria-label="Song collections" hidden></div>
     <div class="actions">
@@ -629,7 +629,7 @@
 
   /* ---------- Home screen ---------- */
   function renderHome() {
-    const title = state.info.title || 'Musical Expressions';
+    const title = state.info.title || 'Ron's Expressions';
     els.cTitle.textContent = title;
     document.title = title;
     const sub = state.info.subtitle || state.info.artist;
@@ -1290,7 +1290,7 @@
     els.playAll.addEventListener('click', () => startPlaylist(false));
     els.shuffleAll.addEventListener('click', () => startPlaylist(true));
     els.shareAll.addEventListener('click', () => {
-      const title = state.info.title || 'Musical Expressions';
+      const title = state.info.title || 'Ron's Expressions';
       if (state.sections.length > 1) {
         const sec = state.sections[state.view];
         share(baseUrl() + '#list=' + encodeURIComponent(sec.name || ''), title + ': ' + sec.label);
